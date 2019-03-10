@@ -1,24 +1,26 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Home from "./Home";
+import Cart from "./Cart";
 import Header from "./components/Header";
-import MyCarousel from "./components/Carousel";
-import MyTab from "./components/Tab";
+import NotFound from "./404";
 import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Container>
-          <Row>
-            <Col xs="12">
-              <Header />
-              <MyCarousel />
-              <MyTab />
-            </Col>
-          </Row>
-        </Container>
+      <div className="app">
+        <Router>
+          <div className="main-container">
+            <Header />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/cart" component={Cart} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
+        </Router>
       </div>
     );
   }

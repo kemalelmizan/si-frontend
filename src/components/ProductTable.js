@@ -7,6 +7,7 @@ import {
   InputGroupAddon,
   Alert
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import Request from "request";
 
 let options = {
@@ -89,6 +90,7 @@ export default class ProductTable extends React.Component {
             <InputGroup>
               <Input
                 type="number"
+                min={1}
                 data-productid={item.id}
                 onChange={this.updateProductCartQuantity}
               />
@@ -111,7 +113,7 @@ export default class ProductTable extends React.Component {
           isOpen={this.state.alertAddedSuccess}
           toggle={this.onAlertAddedSuccessDismiss}
         >
-          Successfully added to cart!
+          Successfully added to <Link to="/cart">cart</Link>!
         </Alert>
         <Table>
           <thead>

@@ -10,19 +10,19 @@ import {
 const items = [
   {
     key: 1,
-    src: "https://placehold.it/930x400",
+    src: "https://placehold.it/1110x400",
     altText: "Slide 1",
     caption: "Slide 1"
   },
   {
     key: 2,
-    src: "https://placehold.it/930x400",
+    src: "https://placehold.it/1110x400",
     altText: "Slide 2",
     caption: "Slide 2"
   },
   {
     key: 3,
-    src: "https://placehold.it/930x400",
+    src: "https://placehold.it/1110x400",
     altText: "Slide 3",
     caption: "Slide 3"
   }
