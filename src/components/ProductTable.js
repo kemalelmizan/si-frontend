@@ -33,11 +33,12 @@ export default class ProductTable extends React.Component {
           <td>{item.name}</td>
           <td>{item.description}</td>
           <td>{item.category}</td>
+          <td>Add to cart</td>
         </tr>
       );
     });
     return (
-      <Table dark>
+      <Table>
         <thead>
           <tr>
             <th>#</th>
